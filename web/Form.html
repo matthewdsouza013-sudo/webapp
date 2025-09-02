@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.
+css" rel="stylesheet"
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65Vohhpuu
+COmLASjC" crossorigin="anonymous">
+<title>Registration</title>
+<style>
+/* Fullscreen background image */
+body {
+background-image: url('re.jpg'); /* URL to your background image
+*/
+
+background-size: cover; /* Ensures the image covers the full
+screen */
+background-position: center; /* Centers the background image */
+background-attachment: fixed; /* Makes the background fixed during
+scroll */
+color: black; /* Change the font color to black */
+font-family: Arial, sans-serif;
+}
+
+/* Semi-transparent overlay for readability */
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Black overlay with some
+transparency */
+z-index: -1; /* Ensure the overlay is below the content */
+}
+.container {
+max-width: 800px;
+margin-top: 50px;
+}
+.form-card {
+background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent
+background for the form */
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Creative and innovative "Register Now" heading */
+h1 {
+text-align: center;
+font-family: 'Poppins', sans-serif; /* More modern font */
+font-size: 3rem; /* Larger font size */
+
+font-weight: 700;
+background: linear-gradient(45deg, #ff6a00, #ff3f00); /* Gradient
+effect */
+-webkit-background-clip : text; /* Clip background to the text */
+color: transparent; /* Hide default text color */
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+animation: slideIn 2s ease-out; /* Animation effect */
+margin-bottom: 20px;
+}
+/* Animation for heading */
+@keyframes slideIn {
+from {
+transform: translateY(-50px);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
+.form-label {
+font-weight: bold;
+}
+.btn-submit {
+background-color: #007bff;
+color: white;
+}
+.btn-submit:hover {
+background-color: #0056b3;
+}
+.form-check-input:checked {
+background-color: #007bff;
+}
+</style>
+</head>
+
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">Max Rental Service</a>
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse" data-bs-target="#navbarNav"
+aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle
+navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link"
+href="file:///C:/Users/STUDENT.LAB3NODE09/Desktop/2305019/max.html"
+target="_blank">Home</a></li>
+<li class="nav-item"><a class="nav-link"
+href="file:///C:/Users/STUDENT.LAB3NODE09/Desktop/2305019/servise.html"
+target="_blank">Services</a></li>
+<li class="nav-item"><a class="nav-link" href=""
+target="_blank">Registration</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Overlay for darkening the background -->
+<div class="overlay"></div>
+<div class="container">
+<div class="form-card">
+<h1>Register Now</h1>
+<form action="/action_page.php" method="POST">
+<div class="row mb-3">
+<div class="col">
+<label for="firstname" class="form-label">First
+Name:</label>
+
+<input type="text" class="form-control" id="firstname"
+placeholder="Enter your first name" name="firstname" required>
+</div>
+<div class="col">
+<label for="lastname" class="form-label">Last Name:</label>
+<input type="text" class="form-control" id="lastname"
+placeholder="Enter your last name" name="lastname" required>
+</div>
+</div>
+<div class="row mb-3">
+<div class="col">
+<label for="phone" class="form-label">Phone:</label>
+<input type="tel" class="form-control" id="phone"
+placeholder="Enter your phone number" name="phone" required>
+</div>
+<div class="col">
+<label for="age" class="form-label">Age:</label>
+<input type="number" class="form-control" id="age"
+placeholder="Enter your age" name="age" required>
+</div>
+</div>
+<div class="mb-3">
+<label for="gender" class="form-label">Gender:</label>
+<select class="form-select" id="gender" name="gender"
+required>
+<option value="">Select Gender</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Others">Others</option>
+</select>
+</div>
+<div class="mb-3">
+<label for="country" class="form-label">Country:</label>
+<select class="form-select" id="country" name="country"
+required>
+<option value="India">India</option>
+<option value="Others">Others</option>
+
+</select>
+</div>
+<div class="mb-3">
+<label for="state" class="form-label">State:</label>
+<select class="form-select" id="state" name="state" required>
+<option value="Goa">Goa</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Kerala">Kerala</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Others">Others</option>
+</select>
+</div>
+<div class="mb-3">
+<label for="marital_status" class="form-label">Marital
+Status:</label><br>
+<div class="form-check form-check-inline">
+<input type="radio" class="form-check-input" id="single"
+name="marital_status" value="Single" checked>
+<label class="form-check-label" for="single">Single</label>
+</div>
+<div class="form-check form-check-inline">
+<input type="radio" class="form-check-input" id="married"
+name="marital_status" value="Married">
+<label class="form-check-label"
+for="married">Married</label>
+</div>
+</div>
+<div class="mb-3">
+<label for="email" class="form-label">Email:</label>
+<input type="email" class="form-control" id="email"
+placeholder="Enter your email" name="email" required>
+</div>
+<div class="mb-3">
+<label for="password" class="form-label">Password:</label>
+
+<input type="password" class="form-control" id="password"
+placeholder="Enter your password" name="password" required>
+</div>
+<div class="form-check mb-3">
+<input class="form-check-input" type="checkbox" id="remember"
+name="remember">
+<label class="form-check-label" for="remember">Remember
+me</label>
+</div>
+<button type="submit" class="btn btn-submit
+btn-block">Submit</button>
+</form>
+</div>
+</div>
+<!-- Optional JavaScript; Bootstrap Bundle with Popper -->
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle
+.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/t
+WtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
